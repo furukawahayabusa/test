@@ -1,0 +1,60 @@
+CSSグラデーションについて
+
+線形（linear-gradient）および放射状（radial-gradient()）の 2 種類のグラデーションがあります。
+
+【書式】
+
+・linear-gradient(開始位置と角度, 開始色, 途中色, 終了色);
+
+開始位置：left・center・right、top・center・bottom
+
+ 角度は、degなどの単位を付けた角度値
+
+開始位置と角度は省略可能：その場合には初期値のtop
+
+
+
+SafariやGoogle Chromeなどのwebkit系ブラウザでは以下を指定
+
+-webkit-gradient(linear, 開始位置, 終了位置, from(開始色), color-stop(位置, 途中色), to(終了色));
+
+
+【書式】
+
+・radial-gradient(開始位置と角度, 形状とサイズ, 開始色, 途中色, 終了色);
+
+開始位置：left・center・right、top・center・bottom
+
+角度：degなどの単位を付けた角度値
+
+開始位置と角度は省略可能：その場合には初期値のcenter
+
+グラデーションの形状：circle …… 正円、ellipse …… 楕円（初期値）
+
+サイズ：
+closest-side …… ボックスの一番近い辺に合わせる
+closest-corner …… ボックスの一番近い角に合わせる
+farthest-side …… ボックスの一番遠い辺に合わせる
+farthest-corner …… ボックスの一番遠い角に合わせる
+contain …… 指定範囲内に収める
+cover …… 指定範囲に合わせて覆う（初期値）
+
+SafariやGoogle Chromeなどのwebkit系ブラウザでは以下を指定
+
+-webkit-gradient(radial, 開始位置, 開始位置の半径, 終了位置, 終了位置の半径, from(開始色), color-stop(位置, 途中色), to(終了色));
+
+
+
+rgbaとは？
+
+RGBカラーモデルのred・green・blueに、alphaが加わったもの
+alpha:色の透明度
+透明度：0（完全に透明）～1（完全に不透明）の数値で指定
+
+＊注意 RGBA値の指定では、RGB値の指定とは異なり #FFFFFF のような使用はできません。
+RGBA値をサポートしていないブラウザでは、透明度だけが無視されて単なるRGB値として扱われる
+→サポートしていないブラウザは、IE8以下。IE9から対応している。
+
+
+
+

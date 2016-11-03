@@ -1,0 +1,42 @@
+clearfixについて
+
+高さを指定したい要素の後に無理やりコンテンツを入れ込んで
+そのコンテンツを非表示にする事で高さを指定させる方法
+
+CSS clearfixの指定方法
+
+例
+
+.clearfix:after{
+ content:"."; //新しいコンテンツ
+ display:block;
+ clear:both;
+ height:0;
+ visibility:hidden; //非表示
+}
+
+
+<!-- IE対応版 -->
+
+.clearfix:after{
+ content:"."; //新しいコンテンツ
+ display:block;
+ clear:both;
+ height:0;
+ visibility:hidden; //非表示
+}
+
+.clearfix{
+	min-height: 1px;//高さの最小値
+
+}
+
+* html .clearfix {
+  height: 1px;
+  /*?*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+<!-- -->
